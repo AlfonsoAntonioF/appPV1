@@ -1,20 +1,55 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useWindowDimensions, SafeAreaView, StatusBar, StyleSheet, Text, View } from "react-native";
+import React from "react";
+import Home from "./Screens/Home";
+import { useEffect, useState } from "react";
+import ItemListCategory from "./Screens/ItemListCategory";
+import ItemDetail from "./Screens/ItemDetail";
 
-export default function App() {
+const App = () => {
+  const [categorySelected, setCategorySelected] = useState("");
+  const [productId, setProductId] = useState(0);
+  const [portrait,setPortrait] = useState(true)
+  const {width,height} = useWindowDimensions()
+
+  useEffect(()=>{
+    if(width > height) setPortrait(false) 
+    else setPortrait(true)
+  },[width,height])
+
+
+  const selectedCategoryState = (category) => {
+    setCategorySelected(category);
+  };
+
+  const selectedProductId = (id) => {
+    setProductId(id);
+  };
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <StatusBar backgroundColor="#4F6D7A" />
+      <SafeAreaView style={styles.container}>
+        {categorySelected ? (
+          productId ? (
+            <ItemDetail productId={productId} portrait={portrait}/>
+          ) : (
+            <ItemListCategory
+              selectedProductId={selectedProductId}
+              categorySelected={categorySelected}
+            />
+          )
+        ) : (
+          <Home selectedCategoryState={selectedCategoryState} />
+        )}
+      </SafeAreaView>
+    </>
   );
-}
+};
+
+export default App;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
