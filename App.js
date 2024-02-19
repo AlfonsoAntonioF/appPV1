@@ -1,15 +1,22 @@
-import { useWindowDimensions, SafeAreaView, StatusBar, StyleSheet, Text, View } from "react-native";
+import { useWindowDimensions, SafeAreaView, StatusBar, StyleSheet} from "react-native";
 import React from "react";
 import Home from "./Screens/Home";
 import { useEffect, useState } from "react";
 import ItemListCategory from "./Screens/ItemListCategory";
 import ItemDetail from "./Screens/ItemDetail";
+import { useFonts } from "expo-font";
+import { fontCollection } from "./src/fonts";
+
+
 
 const App = () => {
   const [categorySelected, setCategorySelected] = useState("");
   const [productId, setProductId] = useState(0);
   const [portrait,setPortrait] = useState(true)
   const {width,height} = useWindowDimensions()
+  const [fontsLoaded] = useFonts(fontCollection)
+
+  if (!fontsLoaded) return null
 
   useEffect(()=>{
     if(width > height) setPortrait(false) 

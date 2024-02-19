@@ -3,6 +3,7 @@ import React from 'react'
 import color from '../src/color'
 import { FontAwesome } from "@expo/vector-icons";
 import { useState } from "react";
+import fonts from '../src/fonts';
 
 
 const ProductByCategory = ({item, selectedProductId}) => {
@@ -59,6 +60,7 @@ const styles = StyleSheet.create({
       width: "30%",
       fontSize: 16,
       color: color.txt,
+      fontFamily:fonts.ProRegu,
     },
     textId: {
       width: "10%",

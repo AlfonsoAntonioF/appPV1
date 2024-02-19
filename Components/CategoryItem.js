@@ -2,6 +2,7 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import Card from "./Card";
 import color from "../src/color";
+import fonts from "../src/fonts";
 
 const CategoryItem = ({ category, selectedCategoryState }) => {
   return (
@@ -28,5 +29,6 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 24,
     color: color.txt,
+    fontFamily:fonts.sansBlack,
   },
 });

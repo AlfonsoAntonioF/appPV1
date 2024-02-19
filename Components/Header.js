@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import color from '../src/color'
+import fonts from '../src/fonts'
 
 const Header = ({title='Abarrotes HyA'}) => {
   return (
@@ -31,5 +32,6 @@ const styles = StyleSheet.create({
         textAlign: "center",
         color: color.txt,
         fontWeight: "bold",
+        fontFamily:fonts.sansBold,
     },
 })
