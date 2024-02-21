@@ -7,7 +7,8 @@ import Search from "../Components/Search";
 import ItemDetail from "./ItemDetail";
 import ProductByCategory from "../Components/ProductByCategory";
 
-const ItemListCategory = ({ categorySelected, selectedProductId }) => {
+const ItemListCategory = ({ navigation, route}) => {
+  const {categorySelected} = route.params
   const [productsCategory, setProductsCategory] = useState([]);
   const [keyWord, setKeyWord] = useState("");
 
@@ -29,16 +30,17 @@ const ItemListCategory = ({ categorySelected, selectedProductId }) => {
   const handlerKeyword = (k) => {
     setKeyWord(k);
   };
+
   return (
     <>
-      <Header title={categorySelected} />
+      {/* <Header title={categorySelected} /> */}
       <Search handlerKeyword={handlerKeyword} />
 
       <FlatList
         data={productsCategory}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <ProductByCategory item={item} selectedProductId={selectedProductId}/>
+          <ProductByCategory item={item} navigation={navigation}/>
           // <ItemDetail item={item} selectedProductId={selectedProductId} />
         )}
       />

@@ -3,7 +3,7 @@ import React from "react";
 import CategoryItem from "./CategoryItem";
 import categories from "../Data/categories.json";
 
-const Categories = ({ selectedCategoryState }) => {
+const Categories = ({ navigation }) => {
   return (
     <FlatList
       data={categories}
@@ -11,7 +11,7 @@ const Categories = ({ selectedCategoryState }) => {
       renderItem={({ item }) => (
         <CategoryItem
           category={item}
-          selectedCategoryState={selectedCategoryState}
+          navigation={navigation}
         />
       )}
     />

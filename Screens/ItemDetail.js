@@ -13,7 +13,8 @@ import { FontAwesome } from "@expo/vector-icons";
 import { useEffect, useState } from "react";
 import Header from "../Components/Header";
 
-const ItemDetail = ({ productId, portrait }) => {
+const ItemDetail = ({ route }) => {
+  const { productId } = route.params;
   const [product, setProduct] = useState({});
 
   useEffect(() => {
@@ -23,27 +24,22 @@ const ItemDetail = ({ productId, portrait }) => {
 
   return (
     <View>
-      <Header title="Detalle del producto" />
+      {/* <Header title="Detalle del producto" /> */}
       <View
-        style={[
-          styles.content,
-          !portrait && { flexDirection: "row", gap: 10, padding: 20 },
-        ]}
+        style={styles.content}
       >
         <Image
-          style={[styles.image, !portrait && { width: "40%", height: 200 }]}
+          style={styles.image}
           source={{ uri: product?.images ? product.images[0] : null }}
           resizeMode="cover"
         />
-        <View style={[styles.containerText, !portrait && { width: "30%" }]}>
+        <View style={styles.containerText}>
           <Text style={styles.title}>{product.title}</Text>
           <Text style={styles.description}>{product.description}</Text>
         </View>
         <View
-          style={[
-            styles.containerPrice,
-            !portrait && { width: "20%", flexDirection: "column" },
-          ]}
+          style={
+            styles.containerPrice}
         >
           <Text style={styles.price}>$ {product.price}</Text>
           <Pressable style={styles.buyNow}>

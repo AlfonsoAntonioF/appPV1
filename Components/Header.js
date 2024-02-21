@@ -1,11 +1,18 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import color from '../src/color'
 import fonts from '../src/fonts'
+import {AntDesign} from "@expo/vector-icons"
 
-const Header = ({title='Abarrotes HyA'}) => {
+const Header = ({title='Abarrotes HyA', navigation}) => {
   return (
     <View style={styles.container}>
+      {navigation.canGoBack() && 
+      <Pressable style={styles.goBack} onPress={()=>navigation.goBack()}>
+        <AntDesign name="arrowleft" size={25} color="black"/>
+
+      </Pressable>
+      }
       <Text style={styles.text} >{title}</Text>
     </View>
   )
@@ -34,4 +41,10 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         fontFamily:fonts.sansBold,
     },
+    goBack:{
+      position:"absolute",
+      left:10,
+      bottom:15
+
+  },
 })

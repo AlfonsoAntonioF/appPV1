@@ -1,4 +1,5 @@
-import { useWindowDimensions, SafeAreaView, StatusBar, StyleSheet} from "react-native";
+import { useWindowDimensions, SafeAreaView, StyleSheet} from "react-native";
+import {StatusBar} from 'expo-status-bar'
 import React from "react";
 import Home from "./Screens/Home";
 import { useEffect, useState } from "react";
@@ -6,6 +7,7 @@ import ItemListCategory from "./Screens/ItemListCategory";
 import ItemDetail from "./Screens/ItemDetail";
 import { useFonts } from "expo-font";
 import { fontCollection } from "./src/fonts";
+import Navigator from "./Navigation/Navigator";
 
 
 
@@ -35,7 +37,10 @@ const App = () => {
   return (
     <>
       <StatusBar backgroundColor="#4F6D7A" />
-      <SafeAreaView style={styles.container}>
+      <Navigator/>
+
+     
+      {/* <SafeAreaView style={styles.container}>
         {categorySelected ? (
           productId ? (
             <ItemDetail productId={productId} portrait={portrait}/>
@@ -48,7 +53,7 @@ const App = () => {
         ) : (
           <Home selectedCategoryState={selectedCategoryState} />
         )}
-      </SafeAreaView>
+      </SafeAreaView> */}
     </>
   );
 };

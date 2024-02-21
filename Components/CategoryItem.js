@@ -4,9 +4,9 @@ import Card from "./Card";
 import color from "../src/color";
 import fonts from "../src/fonts";
 
-const CategoryItem = ({ category, selectedCategoryState }) => {
+const CategoryItem = ({ category, navigation }) => {
   return (
-    <Pressable onPress={() => selectedCategoryState(category)}>
+    <Pressable onPress={() => navigation.navigate('ItemListCategory',{categorySelected:category})}>
       <Card style={styles.cardContainer}>
         <Text style={styles.text}>{category}</Text>
       </Card>

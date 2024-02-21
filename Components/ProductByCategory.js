@@ -6,15 +6,16 @@ import { useState } from "react";
 import fonts from '../src/fonts';
 
 
-const ProductByCategory = ({item, selectedProductId}) => {
+const ProductByCategory = ({item, navigation}) => {
     const [isFavorite, setIsFavorite] = useState(false); // Estado para rastrear si el artículo es favorito
 
     const toggleFavorite = () => {
       setIsFavorite(!isFavorite); // Cambia el estado de favorito al contrario del estado actual
     };
+
   return (
     <TouchableOpacity
-      onPress={() => selectedProductId(item.id)}
+      onPress={() => navigation.navigate('ItemDetail',{productId:item.id}) }
       style={styles.container}
     >
       <View style={styles.content}>
