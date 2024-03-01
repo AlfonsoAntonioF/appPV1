@@ -6,6 +6,7 @@ const colors ={
     precio:'#920202',
     descri:'#51505D',
     cardBg:'#9797A0',
+    iconFocused:'#6F9BE4',
 
 
 }

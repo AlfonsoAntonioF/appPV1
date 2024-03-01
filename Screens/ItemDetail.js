@@ -12,8 +12,12 @@ import products from "../Data/products.json";
 import { FontAwesome } from "@expo/vector-icons";
 import { useEffect, useState } from "react";
 import Header from "../Components/Header";
+import Counter from "../Components/Counter";
+import { useDispatch } from "react-redux";
+import { addCartItem } from "../src/features/cart/cartSlice";
 
 const ItemDetail = ({ route }) => {
+  const dispatch = useDispatch()
   const { productId } = route.params;
   const [product, setProduct] = useState({});
 
@@ -42,11 +46,12 @@ const ItemDetail = ({ route }) => {
             styles.containerPrice}
         >
           <Text style={styles.price}>$ {product.price}</Text>
-          <Pressable style={styles.buyNow}>
-            <Text style={styles.buyNowText}>Buy Now</Text>
+          <Pressable style={styles.buyNow} onPress={() => dispatch(addCartItem(product))}  >
+            <Text style={styles.buyNowText}>Agregar al Carrito</Text>
           </Pressable>
         </View>
       </View>
+      
     </View>
   );
 };
@@ -109,5 +114,12 @@ const styles = StyleSheet.create({
     color: color.txt,
     fontSize: 18,
     fontWeight: "bold",
+  },
+  count:{
+    width:'90%',
+    alignContent: "center",
+    alignSelf:"center",
+    marginTop:10,
+
   },
 });
