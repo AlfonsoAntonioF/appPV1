@@ -8,23 +8,26 @@ import {
 } from "react-native";
 import React from "react";
 import color from "../src/color";
-import products from "../Data/products.json";
+// import products from "../Data/products.json";
 import { FontAwesome } from "@expo/vector-icons";
 import { useEffect, useState } from "react";
 import Header from "../Components/Header";
 import Counter from "../Components/Counter";
 import { useDispatch } from "react-redux";
 import { addCartItem } from "../src/features/cart/cartSlice";
+import { useGetProductQuery } from "../src/app/services/shop";
 
 const ItemDetail = ({ route }) => {
   const dispatch = useDispatch()
   const { productId } = route.params;
-  const [product, setProduct] = useState({});
+  const {data:product,isLoading} = useGetProductQuery(productId)
+  // const [product, setProduct] = useState({});
 
-  useEffect(() => {
-    const productFinded = products.find((product) => product.id === productId);
-    setProduct(productFinded);
-  }, [productId]);
+  // useEffect(() => {
+  //   const productFinded = products.find((product) => product.id === productId);
+  //   setProduct(productFinded);
+  // }, [productId]);
+  if(isLoading) return <View><Text>cargando...</Text></View>
 
   return (
     <View>

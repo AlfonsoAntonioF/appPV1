@@ -2,24 +2,30 @@ import { Button, FlatList, StyleSheet, Text, View } from "react-native";
 import React, { useEffect } from "react";
 import Header from "../Components/Header";
 import { useState } from "react";
-import products from "../Data/products.json";
+// import products from "../Data/products.json";
 import Search from "../Components/Search";
 import ItemDetail from "./ItemDetail";
 import ProductByCategory from "../Components/ProductByCategory";
+import { useGetProductsByCategoryQuery } from "../src/app/services/shop";
 
-const ItemListCategory = ({ navigation, route}) => {
-  const {categorySelected} = route.params
-  const [productsCategory, setProductsCategory] = useState([]);
+const ItemListCategory = ({ navigation, route }) => {
+  const { categorySelected } = route.params;
+  const {
+    data: products,
+    isError,
+    isLoading,
+    isSuccess,
+    error,
+  } = useGetProductsByCategoryQuery(categorySelected);
+  const [productsFiltered, setProductsFiltered] = useState([]);
+  // const [productsCategory, setProductsCategory] = useState([]);
   const [keyWord, setKeyWord] = useState("");
 
   useEffect(() => {
-    if (categorySelected)
-      setProductsCategory(
-        products.filter((product) => product.category === categorySelected)
-      );
+    setProductsFiltered(products);
     if (keyWord)
-      setProductsCategory(
-        productsCategory.filter((product) => {
+      setProductsFiltered(
+        products.filter((product) => {
           const productTitleLower = product.title.toLowerCase();
           const keywordLower = keyWord.toLowerCase();
           return productTitleLower.includes(keywordLower);
@@ -31,20 +37,21 @@ const ItemListCategory = ({ navigation, route}) => {
     setKeyWord(k);
   };
 
+  if(isLoading) return <View><Text>cargando...</Text></View>
+
   return (
     <>
       {/* <Header title={categorySelected} /> */}
       <Search handlerKeyword={handlerKeyword} />
 
       <FlatList
-        data={productsCategory}
+        data={productsFiltered}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <ProductByCategory item={item} navigation={navigation}/>
+          <ProductByCategory item={item} navigation={navigation} />
           // <ItemDetail item={item} selectedProductId={selectedProductId} />
         )}
       />
-
     </>
   );
 };
