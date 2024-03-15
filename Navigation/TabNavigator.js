@@ -6,6 +6,7 @@ import OrdersStack from "./OrdersStack";
 import TabBarIcon from "../Components/TabBarIcon";
 import colors from "../src/color";
 import ProfileStack from "./ProfileStack";
+
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 const Tab = createBottomTabNavigator();
 
@@ -50,7 +51,7 @@ const TabNavigator = () => {
           ),
         }}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Favorites"
         component={FavsNavigator}
         options={{
@@ -58,7 +59,7 @@ const TabNavigator = () => {
             <TabBarIcon title="Favoritos" nameIcon="heart" focused={focused} />
           ),
         }}
-      />
+      /> */}
       <Tab.Screen
         name="ProfileStack"
         component={ProfileStack}
