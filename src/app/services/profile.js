@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export const profileApi = createApi({
     reducerPath:"profileApi",
-    baseQuery:fetchBaseQuery({baseUrl:"https://cursodapp-default-rtdb.firebaseio.com"}),
+    baseQuery:fetchBaseQuery({baseUrl:"https://apppv1-default-rtdb.firebaseio.com"}),
     endpoints:(builder)=>({
         putImage: builder.mutation({
             query:({image,localId})=>({
