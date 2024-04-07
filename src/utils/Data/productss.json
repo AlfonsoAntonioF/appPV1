@@ -1,0 +1,182 @@
+[
+    {
+        "id": 0,
+        "title": "Toallas de Papel",
+        "description": "Paquete de 6 rollos de toallas de papel absorbentes.",
+        "price": 3.49,
+        "discountPercentage": 0,
+        "rating": 4.5,
+        "stock": 45,
+        "brand": "Marca O",
+        "category": "Limpieza del hogar",
+        "thumbnail": "https://m.media-amazon.com/images/I/81lbkccXWHL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/81lbkccXWHL._AC_SL1500_.jpg"
+        ]
+    },
+    {
+        "id": 1,
+        "title": "Aceite de Oliva Extra Virgen",
+        "description": "Aceite de oliva de alta calidad prensado en frío.",
+        "price": 10.99,
+        "discountPercentage": 0,
+        "rating": 4.5,
+        "stock": 50,
+        "brand": "Marca A",
+        "category": "Aceites",
+        "thumbnail": "https://m.media-amazon.com/images/I/41ZhUBsUe7L._AC_SL1000_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/41ZhUBsUe7L._AC_SL1000_.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Aceite de Coco Orgánico",
+        "description": "Aceite de coco virgen extra, perfecto para cocinar y cuidado de la piel.",
+        "price": 8.49,
+        "discountPercentage": 15,
+        "rating": 4.0,
+        "stock": 30,
+        "brand": "Marca B",
+        "category": "Aceites",
+        "thumbnail": "https://m.media-amazon.com/images/I/71k+7fnhhgL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/71k+7fnhhgL._AC_SL1500_.jpg"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Aceitunas Verdes Rellenas de Anchoa",
+        "description": "Aceitunas verdes de alta calidad rellenas de anchoa.",
+        "price": 5.99,
+        "discountPercentage": 0,
+        "rating": 4.8,
+        "stock": 20,
+        "brand": "Marca C",
+        "category": "Aceites",
+        "thumbnail": "https://m.media-amazon.com/images/I/618uFQfXHlL._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/618uFQfXHlL._AC_SL1500_.jpg"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Tomates enlatados pelados",
+        "description": "Tomates enteros pelados enlatados, perfectos para salsas y guisos.",
+        "price": 2.99,
+        "discountPercentage": 0,
+        "rating": 4.2,
+        "stock": 40,
+        "brand": "Marca D",
+        "category": "Enlatados",
+        "thumbnail": "https://m.media-amazon.com/images/I/61-wTE9raWL._AC_SL1000_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/61-wTE9raWL._AC_SL1000_.jpg"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Atún enlatado en aceite",
+        "description": "Atún enlatado de alta calidad en aceite de oliva.",
+        "price": 3.49,
+        "discountPercentage": 10,
+        "rating": 4.5,
+        "stock": 25,
+        "brand": "Marca E",
+        "category": "Enlatados",
+        "thumbnail": "https://m.media-amazon.com/images/I/61zmBRvi-cL._AC_SL1000_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/61zmBRvi-cL._AC_SL1000_.jpg"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Champiñones enlatados",
+        "description": "Champiñones enlatados listos para usar en pizzas y ensaladas.",
+        "price": 1.99,
+        "discountPercentage": 0,
+        "rating": 4.0,
+        "stock": 35,
+        "brand": "Marca F",
+        "category": "Enlatados",
+        "thumbnail": "https://m.media-amazon.com/images/I/614ByrXaerL._AC_SL1000_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/614ByrXaerL._AC_SL1000_.jpg"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Leche Entera Orgánica",
+        "description": "Leche fresca orgánica de vacas alimentadas con pasto.",
+        "price": 3.99,
+        "discountPercentage": 0,
+        "rating": 4.7,
+        "stock": 60,
+        "brand": "Marca D",
+        "category": "Lacteos",
+        "thumbnail": "https://m.media-amazon.com/images/I/51T55M575AS._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/51T55M575AS._AC_SL1500_.jpg"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Queso Manchego Añejo",
+        "description": "Queso manchego añejo de oveja, perfecto para degustar con vino.",
+        "price": 12.99,
+        "discountPercentage": 0,
+        "rating": 4.9,
+        "stock": 25,
+        "brand": "Marca E",
+        "category": "Lacteos",
+        "thumbnail": "https://m.media-amazon.com/images/I/81xSw3WZX8L._AC_SL1500_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/81xSw3WZX8L._AC_SL1500_.jpg"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Yogur Griego Natural",
+        "description": "Yogur griego natural sin azúcar añadida, alto en proteínas.",
+        "price": 1.79,
+        "discountPercentage": 0,
+        "rating": 4.5,
+        "stock": 40,
+        "brand": "Marca F",
+        "category": "Lacteos",
+        "thumbnail": "https://chedrauimx.vtexassets.com/arquivos/ids/28709390-800-auto?v=638479454719070000&width=800&height=auto&aspect=true",
+        "images": [
+            "https://chedrauimx.vtexassets.com/arquivos/ids/28709390-800-auto?v=638479454719070000&width=800&height=auto&aspect=true"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Detergente Líquido para Ropa",
+        "description": "Detergente líquido concentrado para ropa de colores brillantes.",
+        "price": 7.49,
+        "discountPercentage": 0,
+        "rating": 4.3,
+        "stock": 55,
+        "brand": "Marca M",
+        "category": "Limpieza del hogar",
+        "thumbnail": "https://m.media-amazon.com/images/I/61MrwHP1FgL._AC_SL1000_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/61MrwHP1FgL._AC_SL1000_.jpg"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Limpiador Multiusos",
+        "description": "Limpiador multiusos para cocina, baño y otras superficies.",
+        "price": 4.99,
+        "discountPercentage": 0,
+        "rating": 4.0,
+        "stock": 70,
+        "brand": "Marca N",
+        "category": "Limpieza del hogar",
+        "thumbnail": "https://m.media-amazon.com/images/I/61qJu1lU9rL._AC_SL1000_.jpg",
+        "images": [
+            "https://m.media-amazon.com/images/I/61qJu1lU9rL._AC_SL1000_.jpg"
+        ]
+    }
+]

@@ -2,11 +2,13 @@ import { useWindowDimensions, SafeAreaView, StyleSheet } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { useFonts } from "expo-font";
-import { fontCollection } from "./src/fonts";
-import Navigator from "./Navigation/Navigator";
+import { fontCollection } from "./src/utils/Global/fonts";
+import Navigator from "./src/Navigation/Navigator";
 import { Provider } from "react-redux";
 import { store } from "./src/app/store";
+import {init} from "./src/utils/db"
 
+init()
 const App = () => {
   const [fontsLoaded] = useFonts(fontCollection);
 

@@ -6,6 +6,7 @@ import authReducer from '../features/auth/authSlice'
 import { shopApi } from "./services/shop";
 import { authApi } from "./services/auth";
 import { profileApi } from "./services/profile";
+import { ordersApi } from "./services/orders";
 
 
 
@@ -17,9 +18,10 @@ export const store = configureStore({
         [shopApi.reducerPath]: shopApi.reducer,
         [authApi.reducerPath]: authApi.reducer,
         [profileApi.reducerPath]: profileApi.reducer,
+        [ordersApi.reducerPath]:ordersApi.reducer,
     },
     middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(shopApi.middleware, authApi.middleware, profileApi.middleware),
+    getDefaultMiddleware().concat(shopApi.middleware, authApi.middleware, profileApi.middleware, ordersApi.middleware),
 })
 
 
